@@ -10,10 +10,10 @@ const inter = Inter({
 });
 
 export const metadata = {
-    metadataBase: new URL('https://salarycalculator.in'),
+    metadataBase: new URL('https://salarychecker.xyz'),
     title: {
         default: 'Salary After Tax Calculator India – FY 2026-27 | Free In-Hand Salary Calculator',
-        template: '%s | Free India Salary Calculator',
+        template: '%s | SalaryChecker',
     },
     description:
         'Free salary after tax calculator for India. Calculate your in-hand salary, compare Old vs New tax regime, and estimate monthly take-home pay for FY 2026-27. Accurate income tax calculator with 80C, 80D, HRA deductions.',
@@ -31,7 +31,7 @@ export const metadata = {
         description: 'Calculate your in-hand salary. Compare Old vs New tax regime. Free & accurate.',
         type: 'website',
         locale: 'en_IN',
-        siteName: 'India Salary Calculator',
+        siteName: 'SalaryChecker',
     },
     twitter: {
         card: 'summary_large_image',
@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
                 <header className="site-header">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                         <Link href="/" className="font-bold text-lg tracking-tight">
-                            <span className="gradient-text">SalaryWise</span>
+                            <span className="gradient-text">SalaryChecker</span>
                         </Link>
                         <nav className="flex items-center gap-4 sm:gap-6">
                             <Link href="/" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
@@ -103,7 +103,7 @@ export default function RootLayout({ children }) {
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
                             <div>
-                                <h4 className="font-bold text-foreground mb-3">SalaryWise</h4>
+                                <h4 className="font-bold text-foreground mb-3">SalaryChecker</h4>
                                 <p className="text-sm leading-relaxed">
                                     Free, accurate salary after tax calculator for Indian employees. Compare Old and New tax regimes for FY 2026-27.
                                 </p>
@@ -124,7 +124,7 @@ export default function RootLayout({ children }) {
                             </div>
                         </div>
                         <div className="border-t border-border pt-6 text-center text-xs">
-                            <p>© {new Date().getFullYear()} SalaryWise. All rights reserved.</p>
+                            <p>© {new Date().getFullYear()} SalaryChecker. All rights reserved.</p>
                             <p className="mt-1">Not affiliated with any government entity.</p>
                         </div>
                     </div>

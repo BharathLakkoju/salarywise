@@ -12,8 +12,8 @@ export default function BlogPage() {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://salarycalculator.in' },
-            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://salarycalculator.in/blog' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://salarychecker.xyz' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://salarychecker.xyz/blog' },
         ],
     };
 

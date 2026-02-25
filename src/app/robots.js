@@ -7,6 +7,6 @@ export default function robots() {
                 disallow: ['/api/', '/_next/'],
             },
         ],
-        sitemap: 'https://salarycalculator.in/sitemap.xml',
+        sitemap: 'https://salarychecker.xyz/sitemap.xml',
     };
 }

@@ -1,7 +1,7 @@
 import { blogPosts } from '@/lib/blogData';
 
 export default function sitemap() {
-    const baseUrl = 'https://salarycalculator.in';
+    const baseUrl = 'https://salarychecker.xyz';
 
     const blogUrls = blogPosts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,

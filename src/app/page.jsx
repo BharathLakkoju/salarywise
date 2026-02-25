@@ -60,13 +60,13 @@ export default function HomePage() {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://salarycalculator.in',
+                item: 'https://salarychecker.xyz',
             },
             {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Salary After Tax Calculator',
-                item: 'https://salarycalculator.in',
+                item: 'https://salarychecker.xyz',
             },
         ],
     };
