@@ -1,5 +1,5 @@
 import Calculator from '@/components/Calculator';
-import AdSlot from '@/components/AdSlot';
+// import AdSlot from '@/components/AdSlot';
 import FAQ from '@/components/FAQ';
 import SEOContent from '@/components/SEOContent';
 
@@ -118,7 +118,7 @@ export default function HomePage() {
                 </section>
 
                 {/* ── Ad: Above fold ───────────────── */}
-                <AdSlot position="above-fold" />
+                {/* <AdSlot position="above-fold" /> */}
 
                 {/* ── Calculator ───────────────────── */}
                 <section className="mb-12">
@@ -126,13 +126,13 @@ export default function HomePage() {
                 </section>
 
                 {/* ── Ad: After results ─────────────── */}
-                <AdSlot position="after-results" />
+                {/* <AdSlot position="after-results" /> */}
 
                 {/* ── SEO Content ──────────────────── */}
                 <SEOContent />
 
                 {/* ── Ad: Mid content ──────────────── */}
-                <AdSlot position="mid-content" className="my-8" />
+                {/* <AdSlot position="mid-content" className="my-8" /> */}
 
                 {/* ── FAQ ──────────────────────────── */}
                 <FAQ />
