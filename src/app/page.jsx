@@ -138,7 +138,7 @@ export default function HomePage() {
                 <FAQ />
 
                 {/* ── Ad: Bottom ───────────────────── */}
-                <AdSlot position="bottom" className="mt-12" />
+                {/* <AdSlot position="bottom" className="mt-12" /> */}
             </div>
         </>
     );
