@@ -32,8 +32,8 @@ const PIE_COLORS = [COLORS.emerald, COLORS.blue, COLORS.amber, COLORS.rose, COLO
 function getThemeColors() {
     const isDark = document.documentElement.classList.contains('dark');
     return isDark
-        ? { text: '#ffffff', muted: '#ffffff', bg: '#18181b' }
-        : { text: '#000000', muted: '#000000', bg: '#ffffff' };
+        ? { text: '#e9ecef', muted: '#e9ecef', bg: '#1a1a24' }
+        : { text: '#1a1a2e', muted: '#1a1a2e', bg: '#ffffff' };
 }
 
 // ─── Pie Chart ────────────────────────

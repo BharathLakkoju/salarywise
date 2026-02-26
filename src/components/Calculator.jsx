@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { computeSalaryBreakdown } from '@/lib/taxEngine';
 import Results from './Results';
 import MonthlyTable from './MonthlyTable';
+import Tooltip from './Tooltip';
 import dynamic from 'next/dynamic';
 
 const Charts = dynamic(() => import('./Charts'), {
@@ -91,7 +92,9 @@ export default function Calculator() {
                     </h3>
                     <div className="input-group">
                         <label htmlFor="annualCTC" className="input-label">
-                            Annual CTC (₹) <span className="text-red-400">*</span>
+                            <Tooltip text="Cost to Company — the total annual package your employer pays, including basic, HRA, allowances, PF, and bonuses.">
+                                Annual CTC (₹)
+                            </Tooltip> <span className="text-red-400">*</span>
                         </label>
                         <input
                             id="annualCTC"
@@ -111,7 +114,11 @@ export default function Calculator() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                         <div className="input-group">
-                            <label htmlFor="basicPercent" className="input-label">Basic Salary (%)</label>
+                            <label htmlFor="basicPercent" className="input-label">
+                                <Tooltip text="Basic salary is usually 40-50% of CTC. It forms the base for PF, gratuity, and HRA calculations. Check your salary slip.">
+                                    Basic Salary (%)
+                                </Tooltip>
+                            </label>
                             <input
                                 id="basicPercent"
                                 type="number"
@@ -122,7 +129,11 @@ export default function Calculator() {
                             />
                         </div>
                         <div className="input-group">
-                            <label htmlFor="hraPercent" className="input-label">HRA (%)</label>
+                            <label htmlFor="hraPercent" className="input-label">
+                                <Tooltip text="House Rent Allowance — typically 40-50% of basic salary. If you pay rent, HRA can be partially exempt from tax under the Old Regime.">
+                                    HRA (%)
+                                </Tooltip>
+                            </label>
                             <input
                                 id="hraPercent"
                                 type="number"
@@ -138,7 +149,10 @@ export default function Calculator() {
                 {/* ── Regime Selector ──────────────────── */}
                 <div className="calc-card">
                     <h3 className="section-title">
-                        <span className="title-icon">⚖️</span> Tax Regime
+                        <span className="title-icon">⚖️</span>
+                        <Tooltip text="India has two income tax systems. The New Regime has lower rates but no deductions. The Old Regime allows deductions like 80C, HRA, and 80D. 'Compare Both' shows which saves you more.">
+                            Tax Regime
+                        </Tooltip>
                     </h3>
                     <div className="grid grid-cols-3 gap-2">
                         {[
@@ -177,15 +191,17 @@ export default function Calculator() {
                     {showAdvanced && (
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 animate-fadeIn">
                             {[
-                                { id: 'section80C', label: 'Section 80C (max ₹1.5L)', placeholder: 'e.g. 150000' },
-                                { id: 'section80D', label: 'Section 80D (max ₹50K)', placeholder: 'e.g. 25000' },
-                                { id: 'section80CCD', label: 'Section 80CCD - NPS (max ₹50K)', placeholder: 'e.g. 50000' },
-                                { id: 'homeLoanInterest', label: 'Home Loan Interest (max ₹2L)', placeholder: 'e.g. 200000' },
-                                { id: 'rentPaid', label: 'Annual Rent Paid (for HRA)', placeholder: 'e.g. 240000' },
-                                { id: 'otherDeductions', label: 'Other Deductions', placeholder: 'e.g. 10000' },
-                            ].map(({ id, label, placeholder }) => (
+                                { id: 'section80C', label: 'Section 80C', placeholder: 'e.g. 150000', tip: 'Covers EPF, PPF, ELSS, life insurance, tax-saving FDs, tuition fees, and home loan principal. Maximum deduction: ₹1,50,000 per year.' },
+                                { id: 'section80D', label: 'Section 80D', placeholder: 'e.g. 25000', tip: 'Deduction for health insurance premiums. ₹25K for self/family, extra ₹25K-₹50K for parents (₹50K if senior citizen).' },
+                                { id: 'section80CCD', label: 'Section 80CCD(1B) - NPS', placeholder: 'e.g. 50000', tip: 'Additional ₹50,000 deduction for investing in the National Pension System (NPS). This is over and above the 80C limit.' },
+                                { id: 'homeLoanInterest', label: 'Home Loan Interest (Sec 24)', placeholder: 'e.g. 200000', tip: 'Interest paid on home loan for a self-occupied property. Maximum deduction: ₹2,00,000 per year under Section 24(b).' },
+                                { id: 'rentPaid', label: 'Annual Rent Paid', placeholder: 'e.g. 240000', tip: 'Total rent paid during the year. Used to calculate HRA exemption. HRA tax benefit = minimum of: actual HRA, rent minus 10% of basic, or 50%/40% of basic (metro/non-metro).' },
+                                { id: 'otherDeductions', label: 'Other Deductions', placeholder: 'e.g. 10000', tip: 'Any other deductions you claim — e.g. 80E (education loan interest), 80G (donations), 80TTA (savings interest up to ₹10K).' },
+                            ].map(({ id, label, placeholder, tip }) => (
                                 <div className="input-group" key={id}>
-                                    <label htmlFor={id} className="input-label">{label}</label>
+                                    <label htmlFor={id} className="input-label">
+                                        <Tooltip text={tip}>{label}</Tooltip>
+                                    </label>
                                     <input
                                         id={id}
                                         type="number"
@@ -206,7 +222,9 @@ export default function Calculator() {
                                     className="w-5 h-5 rounded border-slate-600 text-emerald-500 focus:ring-emerald-500 bg-slate-700"
                                 />
                                 <label htmlFor="isMetro" className="input-label mb-0 cursor-pointer">
-                                    Metro City (Delhi, Mumbai, Kolkata, Chennai)
+                                    <Tooltip text="Metro cities (Delhi, Mumbai, Kolkata, Chennai) get 50% of basic as HRA exemption instead of 40% for non-metro cities.">
+                                        Metro City
+                                    </Tooltip>
                                 </label>
                             </div>
                         </div>

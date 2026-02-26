@@ -4,36 +4,36 @@ import { useState } from 'react';
 
 const faqData = [
     {
-        q: 'What is the difference between CTC and in-hand salary?',
-        a: 'CTC (Cost to Company) is the total amount a company spends on an employee annually, including basic salary, HRA, PF contribution, bonuses, and other benefits. In-hand salary (take-home salary) is what you actually receive after deducting income tax, PF, professional tax, and other deductions. Typically, in-hand salary is 65-75% of CTC for most employees.',
+        q: 'What is in hand salary? How is it different from CTC?',
+        a: 'In hand salary (also called take home salary) is the amount you actually receive in your bank account each month. CTC (Cost to Company) is the total annual package including basic salary, HRA, PF, bonuses, and perks. Your in hand salary is typically 65-75% of CTC after deducting income tax, employee PF, and professional tax.',
     },
     {
-        q: 'Which tax regime is better – Old or New?',
-        a: 'It depends on your deductions. The New Tax Regime (FY 2025-26) offers lower slab rates and a higher standard deduction (₹75,000) but does not allow most exemptions like 80C, 80D, or HRA. The Old Regime offers higher slab rates but allows deductions. If your total deductions under the Old Regime exceed approximately ₹3.75 lakhs, the Old Regime may be more beneficial. Use our calculator above to compare both regimes for your specific salary.',
+        q: 'How do I calculate my take home salary from CTC?',
+        a: 'To calculate take home salary: subtract employer PF and gratuity from CTC to get gross salary, then subtract income tax, employee PF, and professional tax. Use our salary calculator India tool above to do this instantly — just enter your CTC and see your monthly in hand salary for both Old and New tax regimes.',
+    },
+    {
+        q: 'Which tax regime gives better in hand salary – Old or New?',
+        a: 'It depends on your deductions. The New Tax Regime offers lower slab rates and ₹75,000 standard deduction but no exemptions (80C, 80D, HRA). The Old Regime allows deductions. If your total deductions exceed ~₹3.75 lakhs, Old Regime may give higher take home salary. Use the salary calculator above to compare for your specific CTC.',
     },
     {
         q: 'What is the standard deduction for FY 2025-26?',
-        a: 'Under the New Tax Regime, the standard deduction for salaried employees is ₹75,000 (increased from ₹50,000 in the 2024 Union Budget). Under the Old Tax Regime, it remains ₹50,000. This deduction is automatically applied to your gross salary before computing taxable income.',
+        a: '₹75,000 under the New Tax Regime (increased from ₹50,000 in the 2024 Budget). Under the Old Tax Regime, it remains ₹50,000. This deduction is automatically applied before computing taxable income, increasing your in hand salary.',
     },
     {
         q: 'How is income tax calculated in India?',
-        a: 'Income tax in India is calculated using a slab-based system. Your gross income is first reduced by applicable deductions (standard deduction, 80C, 80D, etc. under Old Regime). The resulting taxable income is then taxed at progressive slab rates. A 4% Health and Education Cess is added to the tax amount. If your income exceeds ₹50 lakhs, a surcharge is also applicable.',
+        a: 'Income tax is calculated using progressive slab rates. Gross income minus deductions (standard deduction, 80C, 80D, HRA under Old Regime) gives taxable income. Tax is computed slab-wise, then 4% Health & Education Cess is added. Surcharge applies above ₹50L income. Our salary calculator handles all this automatically.',
     },
     {
         q: 'What is the tax rebate under Section 87A?',
-        a: 'Under the New Tax Regime for FY 2025-26, if your total taxable income (after standard deduction) is ₹12,00,000 or less, you are eligible for a tax rebate under Section 87A of up to ₹60,000, effectively making your tax liability zero. Under the Old Regime, the rebate is available if taxable income is ₹5,00,000 or less (rebate up to ₹12,500).',
+        a: 'Under the New Regime, if taxable income ≤ ₹12,00,000, you get full tax rebate up to ₹60,000 — effectively zero tax up to ~₹12.75L gross income. Under Old Regime, rebate is available if taxable income ≤ ₹5,00,000 (up to ₹12,500). This can significantly increase your take home salary.',
     },
     {
-        q: 'Is this calculator accurate for FY 2026-27?',
-        a: 'This calculator uses the latest available tax slabs from the Union Budget 2025 (FY 2025-26 / AY 2026-27). The FY 2026-27 slabs will be updated when the next Union Budget is presented. Tax rules are subject to change, and we update the calculator promptly when new slabs are announced.',
+        q: 'Is this salary calculator accurate for FY 2026-27?',
+        a: 'This in hand salary calculator uses the latest tax slabs from Union Budget 2025 (FY 2025-26 / AY 2026-27). We update the salary calculator promptly when new slabs are announced. Tax rules are subject to change with each Union Budget.',
     },
     {
-        q: 'Do I need to file ITR if my income is below the taxable limit?',
-        a: 'While you may not owe any tax if your income is below the basic exemption limit (₹2.5L for Old Regime, ₹3L for New Regime) or if you qualify for full rebate under Section 87A, it is still advisable to file your ITR (Income Tax Return) to maintain financial records, claim TDS refunds, and for visa/loan applications.',
-    },
-    {
-        q: 'How does HRA exemption work?',
-        a: 'HRA (House Rent Allowance) exemption is available only under the Old Tax Regime. It is the minimum of: (1) Actual HRA received, (2) 50% of basic salary for metro cities or 40% for non-metro cities, and (3) Rent paid minus 10% of basic salary. You need to pay rent and have HRA as part of your salary to claim this exemption.',
+        q: 'How does HRA exemption increase take home salary?',
+        a: 'HRA exemption (Old Regime only) is the minimum of: actual HRA received, 50%/40% of basic (metro/non-metro), or rent paid minus 10% of basic. If you pay rent and receive HRA, this exemption reduces taxable income and increases your in hand salary. Enter your rent in the salary calculator to see the impact.',
     },
 ];
 

@@ -11,18 +11,26 @@ export default function HomePage() {
         mainEntity: [
             {
                 '@type': 'Question',
-                name: 'What is the difference between CTC and in-hand salary?',
+                name: 'What is in hand salary? How is it different from CTC?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'CTC (Cost to Company) is the total annual expense a company incurs for an employee. In-hand salary is what you receive after deductions. Typically 65-75% of CTC.',
+                    text: 'In hand salary (take home salary) is the amount you receive in your bank account each month. CTC is the total annual package including basic, HRA, PF, bonuses. In hand salary is typically 65-75% of CTC after income tax, PF, and professional tax deductions.',
                 },
             },
             {
                 '@type': 'Question',
-                name: 'Which tax regime is better – Old or New for FY 2025-26?',
+                name: 'How do I calculate my take home salary from CTC?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'The New Regime offers lower rates but no deductions. The Old Regime allows deductions under 80C, 80D, HRA. If your deductions exceed ₹3.75L, Old Regime may be better.',
+                    text: 'Subtract employer PF and gratuity from CTC to get gross salary, then subtract income tax, employee PF, and professional tax. Use our free salary calculator India to calculate in hand salary instantly from CTC.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'Which tax regime gives better in hand salary – Old or New?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'The New Regime has lower rates but no deductions. The Old Regime allows 80C, 80D, HRA deductions. If deductions exceed ₹3.75L, Old Regime may give higher take home salary. Use a salary calculator to compare.',
                 },
             },
             {
@@ -30,15 +38,7 @@ export default function HomePage() {
                 name: 'What is the standard deduction for FY 2025-26?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Under New Regime: ₹75,000. Under Old Regime: ₹50,000.',
-                },
-            },
-            {
-                '@type': 'Question',
-                name: 'How is income tax calculated in India?',
-                acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Gross income minus deductions equals taxable income. Tax is computed on taxable income using slab rates. 4% cess is added. Surcharge applies above ₹50L.',
+                    text: '₹75,000 under New Regime (increased from ₹50,000). ₹50,000 under Old Regime. Automatically applied before computing taxable income.',
                 },
             },
             {
@@ -46,7 +46,7 @@ export default function HomePage() {
                 name: 'What is the tax rebate under Section 87A?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Under New Regime, if taxable income ≤ ₹12L, rebate up to ₹60,000 is available. Under Old Regime, if taxable income ≤ ₹5L, rebate up to ₹12,500.',
+                    text: 'Under New Regime, taxable income ≤ ₹12L gets full rebate up to ₹60,000 — effectively zero tax up to ~₹12.75L gross. Under Old Regime, rebate up to ₹12,500 if taxable income ≤ ₹5L.',
                 },
             },
         ],
@@ -60,13 +60,13 @@ export default function HomePage() {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://salarychecker.xyz',
+                item: 'https://salarywise.xyz',
             },
             {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Salary After Tax Calculator',
-                item: 'https://salarychecker.xyz',
+                name: 'In Hand Salary Calculator India',
+                item: 'https://salarywise.xyz',
             },
         ],
     };
@@ -74,8 +74,8 @@ export default function HomePage() {
     const webAppSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
-        name: 'Salary After Tax Calculator India',
-        description: 'Free salary after tax calculator for India. Compare Old vs New tax regime for FY 2026-27.',
+        name: 'In Hand Salary Calculator India – Take Home Salary Calculator',
+        description: 'Free salary calculator for India. Calculate in hand salary from CTC, compare Old vs New tax regime, and see your take home salary with monthly breakdown for FY 2025-26 (AY 2026-27).',
         applicationCategory: 'FinanceApplication',
         operatingSystem: 'Any',
         offers: {
@@ -107,13 +107,13 @@ export default function HomePage() {
                         <span>🆕</span> Updated for FY 2025-26 (AY 2026-27)
                     </div>
                     <h1 className="hero-title mb-4">
-                        <span className="gradient-text">Salary After Tax</span>
+                        <span className="gradient-text">In Hand Salary</span>
                         <br />
                         <span>Calculator India</span>
                     </h1>
                     <p className="hero-subtitle">
-                        Calculate your in-hand salary instantly. Compare Old vs New tax regime.
-                        See monthly breakdown, tax savings, and visual charts — all for free.
+                        Free take home salary calculator for India. Enter your CTC, compare Old vs New
+                        tax regime, and see your monthly in hand salary instantly.
                     </p>
                 </section>
 

@@ -7,6 +7,6 @@ export default function robots() {
                 disallow: ['/api/', '/_next/'],
             },
         ],
-        sitemap: 'https://salarychecker.xyz/sitemap.xml',
+        sitemap: 'https://salarywise.xyz/sitemap.xml',
     };
 }

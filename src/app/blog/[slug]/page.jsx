@@ -398,7 +398,7 @@ export default async function BlogPostPage({ params }) {
         datePublished: postMeta.date,
         author: {
             '@type': 'Organization',
-            name: 'SalaryChecker',
+            name: 'SalaryWise',
         },
     };
 
