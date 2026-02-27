@@ -1,6 +1,36 @@
 // Blog post data
 export const blogPosts = [
     {
+        slug: 'in-hand-salary-calculator-from-ctc',
+        title: 'CTC to In Hand Salary Calculator – How to Calculate Take Home Salary from CTC',
+        description:
+            'Learn how to convert CTC to in hand salary step by step. Understand all deductions from CTC and calculate your exact take home salary with our free salary calculator India.',
+        date: '2025-02-20',
+        readTime: '7 min read',
+        category: 'Salary Guide',
+        emoji: '💰',
+    },
+    {
+        slug: 'in-hand-salary-for-15-lpa',
+        title: 'In Hand Salary for ₹15 LPA – Take Home Salary Breakdown with Calculator',
+        description:
+            'Calculate exact in hand salary for 15 lakhs per annum CTC. See monthly take home salary under Old vs New tax regime with detailed tax breakdown.',
+        date: '2025-02-18',
+        readTime: '6 min read',
+        category: 'Examples',
+        emoji: '📊',
+    },
+    {
+        slug: 'take-home-salary-calculator-guide',
+        title: 'Take Home Salary Calculator India – Complete Guide to Calculating Net Salary',
+        description:
+            'Everything you need to know about calculating take home salary in India. Covers PF, tax deductions, HRA, standard deduction, and how to use a salary calculator.',
+        date: '2025-02-16',
+        readTime: '9 min read',
+        category: 'Salary Guide',
+        emoji: '🧮',
+    },
+    {
         slug: 'old-vs-new-tax-regime-explained',
         title: 'Old vs New Tax Regime – Which One Should You Choose in FY 2025-26?',
         description:

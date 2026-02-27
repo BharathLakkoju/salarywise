@@ -19,6 +19,205 @@ export async function generateMetadata({ params }) {
 
 // ── Blog content by slug ─────────────
 const blogContent = {
+    'in-hand-salary-calculator-from-ctc': {
+        content: (
+            <div className="seo-content">
+                <p>
+                    If you&apos;ve just received a job offer or salary revision, the first question you probably have is:
+                    &ldquo;What will my <strong>in hand salary</strong> be?&rdquo; Your CTC (Cost to Company) and take home
+                    salary are very different numbers. This guide explains exactly how to <strong>calculate in hand salary
+                        from CTC</strong> and what deductions reduce your take home pay.
+                </p>
+
+                <h2>What is CTC vs In Hand Salary?</h2>
+                <p>
+                    <strong>CTC (Cost to Company)</strong> is everything your employer spends on you — basic salary, HRA,
+                    special allowances, employer PF, gratuity, insurance, and bonuses. Your <strong>in hand salary</strong> (net
+                    salary or take home salary) is what actually hits your bank account after all deductions.
+                </p>
+                <table>
+                    <thead><tr><th>Component</th><th>Included in CTC?</th><th>Deducted from Salary?</th></tr></thead>
+                    <tbody>
+                        <tr><td>Basic Salary</td><td>✅</td><td>—</td></tr>
+                        <tr><td>HRA</td><td>✅</td><td>—</td></tr>
+                        <tr><td>Special Allowance</td><td>✅</td><td>—</td></tr>
+                        <tr><td>Employer PF (12%)</td><td>✅</td><td>Not paid to you</td></tr>
+                        <tr><td>Employee PF (12%)</td><td>—</td><td>✅ Deducted</td></tr>
+                        <tr><td>Income Tax (TDS)</td><td>—</td><td>✅ Deducted</td></tr>
+                        <tr><td>Professional Tax</td><td>—</td><td>✅ Deducted</td></tr>
+                        <tr><td>Gratuity</td><td>✅</td><td>Not paid monthly</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Step-by-Step: CTC to In Hand Salary Calculation</h2>
+                <ol>
+                    <li><strong>Start with CTC</strong> — e.g. ₹12,00,000 per year</li>
+                    <li><strong>Subtract employer PF</strong> — 12% of basic (if basic is 40% of CTC = ₹4,80,000, PF = ₹57,600)</li>
+                    <li><strong>Subtract gratuity</strong> — 4.81% of basic = ₹23,088</li>
+                    <li><strong>Gross salary</strong> = CTC - employer PF - gratuity = ₹11,19,312</li>
+                    <li><strong>Subtract employee PF</strong> = ₹57,600</li>
+                    <li><strong>Subtract income tax</strong> (based on regime chosen)</li>
+                    <li><strong>Subtract professional tax</strong> = ₹2,400 (₹200/month)</li>
+                    <li><strong>Net salary = in hand salary</strong></li>
+                </ol>
+
+                <h2>Quick CTC to In Hand Salary Table</h2>
+                <table>
+                    <thead><tr><th>Annual CTC</th><th>Monthly In Hand (New Regime)</th><th>Monthly In Hand (Old Regime*)</th></tr></thead>
+                    <tbody>
+                        <tr><td>₹5 LPA</td><td>~₹38,000</td><td>~₹38,000</td></tr>
+                        <tr><td>₹8 LPA</td><td>~₹58,500</td><td>~₹55,000</td></tr>
+                        <tr><td>₹10 LPA</td><td>~₹72,000</td><td>~₹68,500</td></tr>
+                        <tr><td>₹12 LPA</td><td>~₹85,000</td><td>~₹80,000</td></tr>
+                        <tr><td>₹15 LPA</td><td>~₹1,03,000</td><td>~₹98,000</td></tr>
+                        <tr><td>₹20 LPA</td><td>~₹1,32,000</td><td>~₹1,25,000</td></tr>
+                    </tbody>
+                </table>
+                <p><em>*Old Regime assumes ₹1.5L 80C + ₹25K 80D deductions</em></p>
+
+                <h2>Use Our Free In Hand Salary Calculator</h2>
+                <p>
+                    Instead of manual calculations, use our free <Link href="/" className="text-accent hover:underline">in hand salary calculator</Link> to
+                    instantly convert your CTC to take home salary. Enter your CTC, choose your tax regime, add deductions,
+                    and see your exact monthly in hand salary with a complete breakdown.
+                </p>
+            </div>
+        ),
+    },
+    'in-hand-salary-for-15-lpa': {
+        content: (
+            <div className="seo-content">
+                <p>
+                    ₹15 LPA (15 lakhs per annum) is a common salary milestone for mid-career professionals in India,
+                    especially in IT, consulting, and finance. But what is the actual <strong>in hand salary for 15 LPA</strong>?
+                    Let&apos;s calculate the exact <strong>take home salary</strong> under both tax regimes.
+                </p>
+
+                <h2>Salary Structure for ₹15 LPA</h2>
+                <table>
+                    <thead><tr><th>Component</th><th>Annual</th><th>Monthly</th></tr></thead>
+                    <tbody>
+                        <tr><td>Basic Salary (40%)</td><td>₹6,00,000</td><td>₹50,000</td></tr>
+                        <tr><td>HRA (20%)</td><td>₹3,00,000</td><td>₹25,000</td></tr>
+                        <tr><td>Special Allowance</td><td>₹6,00,000</td><td>₹50,000</td></tr>
+                        <tr><td><strong>Total CTC</strong></td><td><strong>₹15,00,000</strong></td><td><strong>₹1,25,000</strong></td></tr>
+                    </tbody>
+                </table>
+
+                <h2>In Hand Salary Under New Tax Regime</h2>
+                <table>
+                    <thead><tr><th>Step</th><th>Amount</th></tr></thead>
+                    <tbody>
+                        <tr><td>Gross Income</td><td>₹15,00,000</td></tr>
+                        <tr><td>Standard Deduction</td><td>-₹75,000</td></tr>
+                        <tr><td>Taxable Income</td><td>₹14,25,000</td></tr>
+                        <tr><td>Tax (slab-wise)</td><td>₹1,15,000</td></tr>
+                        <tr><td>Cess (4%)</td><td>₹4,600</td></tr>
+                        <tr><td><strong>Total Tax</strong></td><td><strong>₹1,19,600</strong></td></tr>
+                        <tr><td><strong>Annual In Hand Salary</strong></td><td><strong>₹13,80,400</strong></td></tr>
+                        <tr><td><strong>Monthly Take Home</strong></td><td><strong>₹1,15,033</strong></td></tr>
+                    </tbody>
+                </table>
+
+                <h2>In Hand Salary Under Old Tax Regime (with deductions)</h2>
+                <p>Assuming ₹1.5L under 80C, ₹25K under 80D, and ₹50K NPS under 80CCD(1B):</p>
+                <table>
+                    <thead><tr><th>Step</th><th>Amount</th></tr></thead>
+                    <tbody>
+                        <tr><td>Gross Income</td><td>₹15,00,000</td></tr>
+                        <tr><td>Standard Deduction</td><td>-₹50,000</td></tr>
+                        <tr><td>80C Deduction</td><td>-₹1,50,000</td></tr>
+                        <tr><td>80D Deduction</td><td>-₹25,000</td></tr>
+                        <tr><td>80CCD(1B) NPS</td><td>-₹50,000</td></tr>
+                        <tr><td>Taxable Income</td><td>₹12,25,000</td></tr>
+                        <tr><td><strong>Total Tax (with cess)</strong></td><td><strong>₹1,79,400</strong></td></tr>
+                        <tr><td><strong>Monthly Take Home</strong></td><td><strong>₹1,10,050</strong></td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Verdict: Which Regime Gives Better In Hand Salary at 15 LPA?</h2>
+                <p>
+                    At ₹15 LPA, the <strong>New Tax Regime gives ~₹5,000 more per month</strong> in hand salary compared to
+                    Old Regime even with ₹2.25L in deductions. The New Regime wins unless you have very high deductions
+                    (HRA + home loan + full 80C + 80D + NPS).
+                </p>
+                <p>
+                    <Link href="/" className="text-accent hover:underline">→ Calculate your exact in hand salary for 15 LPA</Link>
+                </p>
+            </div>
+        ),
+    },
+    'take-home-salary-calculator-guide': {
+        content: (
+            <div className="seo-content">
+                <p>
+                    Understanding your <strong>take home salary</strong> is the foundation of personal finance. Whether you call
+                    it net salary, in hand salary, or take home pay — it&apos;s the amount that actually reaches your bank
+                    account each month. This complete guide explains every component that affects your take home salary and
+                    how to use a <strong>salary calculator India</strong> to compute it accurately.
+                </p>
+
+                <h2>What is Take Home Salary?</h2>
+                <p>
+                    <strong>Take home salary</strong> = Gross Salary - Income Tax - Employee PF - Professional Tax. It&apos;s
+                    the final amount credited to your bank after all statutory and voluntary deductions. For most Indian
+                    employees, take home salary is about 65-80% of CTC depending on tax bracket and deductions.
+                </p>
+
+                <h2>Components That Reduce Your Take Home Salary</h2>
+                <ul>
+                    <li><strong>Income Tax (TDS):</strong> The biggest deduction. Ranges from 0% to 30% based on income slab and regime chosen.</li>
+                    <li><strong>Employee Provident Fund (EPF):</strong> 12% of basic salary (matched by employer). Goes to your PF account.</li>
+                    <li><strong>Professional Tax:</strong> ₹200/month in most states (₹2,400/year). Some states exempt or cap it differently.</li>
+                    <li><strong>Health Insurance (if deducted):</strong> Some companies deduct health insurance premiums from salary.</li>
+                </ul>
+
+                <h2>How to Use a Take Home Salary Calculator</h2>
+                <p>
+                    Our free <Link href="/" className="text-accent hover:underline">salary calculator India</Link> makes it simple:
+                </p>
+                <ol>
+                    <li><strong>Enter your annual CTC</strong> — the number from your offer letter</li>
+                    <li><strong>Set Basic Salary %</strong> — typically 40% (check your salary slip)</li>
+                    <li><strong>Set HRA %</strong> — typically 20% of CTC</li>
+                    <li><strong>Choose tax regime</strong> — New, Old, or Compare Both</li>
+                    <li><strong>Add deductions</strong> — 80C, 80D, NPS, rent (if using Old Regime)</li>
+                    <li><strong>Click Calculate</strong> — see your monthly take home salary instantly</li>
+                </ol>
+
+                <h2>Take Home Salary at Different CTC Levels</h2>
+                <table>
+                    <thead><tr><th>CTC</th><th>Monthly Take Home (New)</th><th>Effective Tax Rate</th></tr></thead>
+                    <tbody>
+                        <tr><td>₹4 LPA</td><td>~₹33,000</td><td>0%</td></tr>
+                        <tr><td>₹6 LPA</td><td>~₹48,000</td><td>0%</td></tr>
+                        <tr><td>₹8 LPA</td><td>~₹62,500</td><td>~2.5%</td></tr>
+                        <tr><td>₹10 LPA</td><td>~₹80,500</td><td>~3.4%</td></tr>
+                        <tr><td>₹12 LPA</td><td>~₹93,000</td><td>~5.2%</td></tr>
+                        <tr><td>₹15 LPA</td><td>~₹1,15,000</td><td>~8%</td></tr>
+                        <tr><td>₹20 LPA</td><td>~₹1,47,000</td><td>~12%</td></tr>
+                        <tr><td>₹25 LPA</td><td>~₹1,75,000</td><td>~15.8%</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Tips to Increase Your Take Home Salary</h2>
+                <ol>
+                    <li><strong>Choose the right tax regime</strong> — use the <Link href="/" className="text-accent hover:underline">in hand salary calculator</Link> to compare</li>
+                    <li><strong>Maximize deductions under Old Regime</strong> — 80C + 80D + NPS + HRA can save lakhs</li>
+                    <li><strong>Restructure your salary</strong> — ask HR to optimize components (more HRA, food coupons)</li>
+                    <li><strong>Invest in NPS</strong> — extra ₹50K deduction under 80CCD(1B)</li>
+                    <li><strong>Submit rent receipts</strong> — if paying rent, HRA exemption is a significant tax saver</li>
+                </ol>
+
+                <h2>Start Calculating Your Take Home Salary</h2>
+                <p>
+                    Don&apos;t guess your in hand salary — calculate it accurately. Use our free
+                    <Link href="/" className="text-accent hover:underline"> take home salary calculator</Link> to see your exact
+                    monthly net salary, compare Old vs New regimes, and plan your finances better.
+                </p>
+            </div>
+        ),
+    },
     'old-vs-new-tax-regime-explained': {
         content: (
             <div className="seo-content">
@@ -88,7 +287,7 @@ const blogContent = {
                     For most salaried individuals without major deductions, the New Tax Regime is more beneficial due to
                     its lower slab rates and the generous ₹12 lakh rebate. However, if you actively invest in tax-saving
                     instruments and have HRA/home loan benefits, run the numbers for your specific situation using our
-                    <Link href="/" className="text-accent hover:underline"> salary after tax calculator</Link>.
+                    <Link href="/" className="text-accent hover:underline">in hand salary calculator</Link>.
                 </p>
             </div>
         ),
@@ -162,7 +361,7 @@ const blogContent = {
                 <h2>9. Compare Tax Regimes Every Year</h2>
                 <p>
                     Don&apos;t stick to one regime out of habit. Use our
-                    <Link href="/" className="text-accent hover:underline"> salary calculator</Link> to compare
+                    <Link href="/" className="text-accent hover:underline">in hand salary calculator</Link> to compare
                     both regimes each year, as your deductions and income may change.
                 </p>
 
@@ -230,7 +429,7 @@ const blogContent = {
                 <p>
                     For most young professionals, ELSS is the best 80C investment due to high return potential and the
                     shortest lock-in of just 3 years. Combine it with PPF for safety and tax-free returns.
-                    Use our <Link href="/" className="text-accent hover:underline">salary calculator</Link> to see how
+                    Use our <Link href="/" className="text-accent hover:underline">in hand salary calculator India</Link> to see how
                     80C deductions impact your tax under the Old Regime.
                 </p>
             </div>
@@ -437,12 +636,12 @@ export default async function BlogPostPage({ params }) {
                 <AdSlot position="bottom" className="mt-8" />
 
                 <div className="mt-12 p-6 calc-card text-center">
-                    <p className="text-lg font-semibold mb-2">💡 Try Our Free Calculator</p>
+                    <p className="text-lg font-semibold mb-2">💰 Calculate Your In Hand Salary</p>
                     <p className="text-muted text-sm mb-4">
-                        Calculate your exact take-home salary and compare tax regimes instantly.
+                        Use our free salary calculator India to see your exact take home salary and compare tax regimes.
                     </p>
                     <Link href="/" className="btn-primary inline-block">
-                        Calculate Your Salary →
+                        Open In Hand Salary Calculator →
                     </Link>
                 </div>
             </div>

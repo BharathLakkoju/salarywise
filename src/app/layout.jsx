@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import ThemeToggle from '@/components/ThemeToggle';
 import Link from 'next/link';
+import Script from 'next/script';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -41,11 +42,20 @@ export const metadata = {
         type: 'website',
         locale: 'en_IN',
         siteName: 'SalaryWise',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'SalaryWise - In Hand Salary Calculator India',
+            },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'In Hand Salary Calculator India | Take Home Salary Calculator FY 2026-27',
         description: 'Free salary calculator India. Calculate in hand salary from CTC, compare Old vs New tax regime. Accurate take home salary calculator.',
+        images: ['/og-image.png'],
     },
     robots: {
         index: true,
@@ -63,8 +73,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="dark" suppressHydrationWarning>
-            <head>
+            <head suppressHydrationWarning>
                 <script
+                    suppressHydrationWarning
                     dangerouslySetInnerHTML={{
                         __html: `
               try {
@@ -78,11 +89,14 @@ export default function RootLayout({ children }) {
             `,
                     }}
                 />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4502367300665202"
-                    crossorigin="anonymous"></script>
                 <meta name="google-site-verification" content="tmihljXdDJciZcG_KNrJ0Jz9eRjcvM656wNKlXj4Fvc" />
             </head>
             <body className={`${inter.variable} font-sans antialiased`}>
+                <Script
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4502367300665202"
+                    crossOrigin="anonymous"
+                    strategy="afterInteractive"
+                />
                 {/* ── Header ─────────────────────────── */}
                 <header className="site-header">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">

@@ -85,6 +85,15 @@ export default function HomePage() {
         },
     };
 
+    const organizationSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'SalaryWise',
+        url: 'https://salarywise.xyz',
+        description: 'Free in hand salary calculator for India. Calculate take home salary from CTC, compare Old vs New tax regime.',
+        sameAs: [],
+    };
+
     return (
         <>
             <script
@@ -98,6 +107,10 @@ export default function HomePage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
             />
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-14">
